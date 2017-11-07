@@ -42,6 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\PanelExtensions.cs" />
+    <Compile Include="Objects\Boards\Coordinates.cs" />
+    <Compile Include="Objects\Boards\FiringBoard.cs" />
+    <Compile Include="Objects\Boards\GameBoard.cs" />
+    <Compile Include="Objects\Boards\Panel.cs" />
+    <Compile Include="Objects\Games\Game.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\Ships\Battleship.cs" />
+    <Compile Include="Objects\Ships\Destroyer.cs" />
+    <Compile Include="Objects\Ships\Ship.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
