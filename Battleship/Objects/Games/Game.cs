@@ -16,7 +16,7 @@ namespace BattleshipModellingPractice.Objects.Games
             Player2.PlaceShips();
 
             Player1.OutputBoards();
-            Player2.OutputBoards();
+            //Player2.OutputBoards();
         }
 
         public void PlayRound()
@@ -24,13 +24,13 @@ namespace BattleshipModellingPractice.Objects.Games
             //Each exchange of shots is called a Round.
             //One round = Player 1 fires a shot, then Player 2 fires a shot.
 
-            //Console.WriteLine("Where would you like to shoot along?");
-            //var along = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Where would you like to shoot down?");
-            //var down = int.Parse(Console.ReadLine());
-            //var coordinates = new Boards.Coordinates(along, down);
+            Console.WriteLine("Where would you like to shoot along?");
+            var along = int.Parse(Console.ReadLine());
+            Console.WriteLine("Where would you like to shoot down?");
+            var down = int.Parse(Console.ReadLine());
+            var coordinates = new Boards.Coordinates(along, down);
 
-            var coordinates = Player1.FireShot();
+            //Console.WriteLine(Player1.Name + " already picked those coordinates");
 
             var result = Player2.ProcessShot(coordinates);
             Player1.ProcessShotResult(coordinates, result);
@@ -41,6 +41,8 @@ namespace BattleshipModellingPractice.Objects.Games
                 result = Player1.ProcessShot(coordinates);
                 Player2.ProcessShotResult(coordinates, result);
             }
+
+            Player1.OutputBoards();
         }
 
         public void PlayToEnd()
