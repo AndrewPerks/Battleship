@@ -27,7 +27,7 @@ namespace BattleshipModellingPractice.Objects
             Ships = new List<Ship>()
             {
                 new Destroyer(),
-                //new Destroyer(),
+                new Destroyer(),
                 new Battleship()
             };
             GameBoard = new GameBoard();
@@ -39,10 +39,31 @@ namespace BattleshipModellingPractice.Objects
             Console.WriteLine(Environment.NewLine);
             Console.WriteLine(Name);
             Console.WriteLine("Own Board:                          Firing Board:");
-            for(int row = 1; row <= 10; row++)
+
+            char c1 = 'A';
+            Console.Write("  ");
+            for(int letters = 1; letters <= 10; letters++)
             {
-                for(int ownColumn = 1; ownColumn <= 10; ownColumn++)
+                Console.Write(letters + " ");
+            }
+
+            Console.Write("               ");
+
+            for (int lettersFiring = 1; lettersFiring <= 10; lettersFiring++)
+            {
+                Console.Write(lettersFiring + " ");
+            }
+
+            Console.WriteLine();
+            for (int row = 1; row <= 10; row++)
+            {
+                
+                Console.Write(c1 + " ");
+                c1++;
+                
+                for (int ownColumn = 1; ownColumn <= 10; ownColumn++)
                 {
+                       
                     Console.Write(GameBoard.Panels.At(row, ownColumn).Status + " ");
                 }
                 Console.Write("                ");
@@ -167,14 +188,17 @@ namespace BattleshipModellingPractice.Objects
 
         public void ProcessShotResult(Coordinates coords, ShotResult result)
         {
+            //var gamePanel = GameBoard.Panels.At(coords.Row, coords.Column);
             var panel = FiringBoard.Panels.At(coords.Row, coords.Column);
             switch(result)
             {
                 case ShotResult.Hit:
+                    //gamePanel.OccupationType = OccupationType.Hit;
                     panel.OccupationType = OccupationType.Hit;
                     break;
 
                 default:
+                    //gamePanel.OccupationType = OccupationType.Miss;
                     panel.OccupationType = OccupationType.Miss;
                     break;
             }
