@@ -30,6 +30,10 @@ namespace BattleshipModellingPractice.Objects.Games
             var down = int.Parse(Console.ReadLine());
             var coordinates = new Boards.Coordinates(along, down);
 
+            // Have coordinates been picked
+            // Is input valid
+
+
             //Console.WriteLine(Player1.Name + " already picked those coordinates");
 
             var result = Player2.ProcessShot(coordinates);

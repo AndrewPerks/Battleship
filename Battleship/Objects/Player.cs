@@ -40,7 +40,7 @@ namespace BattleshipModellingPractice.Objects
             Console.WriteLine(Name);
             Console.WriteLine("Own Board:                          Firing Board:");
 
-            char c1 = 'A';
+            char characterLetter = 'A';
             Console.Write("  ");
             for(int letters = 1; letters <= 10; letters++)
             {
@@ -56,17 +56,18 @@ namespace BattleshipModellingPractice.Objects
 
             Console.WriteLine();
             for (int row = 1; row <= 10; row++)
-            {
-                
-                Console.Write(c1 + " ");
-                c1++;
-                
+            {               
+                Console.Write(characterLetter + " ");
+                                
                 for (int ownColumn = 1; ownColumn <= 10; ownColumn++)
                 {
                        
                     Console.Write(GameBoard.Panels.At(row, ownColumn).Status + " ");
                 }
-                Console.Write("                ");
+                Console.Write("              ");
+
+                Console.Write(characterLetter + " ");
+                characterLetter++;
                 for (int firingColumn = 1; firingColumn <= 10; firingColumn++)
                 {
                     Console.Write(FiringBoard.Panels.At(row, firingColumn).Status + " ");
@@ -203,5 +204,14 @@ namespace BattleshipModellingPractice.Objects
                     break;
             }
         }
+
+        //public Coordinates IsValid(string playerInput)
+        //{
+        //    var error = "";
+
+
+
+        //    return error;
+        //}
     }
 }
