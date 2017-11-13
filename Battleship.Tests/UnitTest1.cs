@@ -13,7 +13,7 @@ namespace Battleship.Tests
 
             string testInput = "A11";
 
-            bool isValid = gameClass.isCoordinatesValid(testInput);
+            bool isValid = gameClass.IsCoordinateValid(testInput);
 
             Assert.IsFalse(isValid);
         }
@@ -25,7 +25,7 @@ namespace Battleship.Tests
 
             string testInput = "K1";
 
-            bool isValid = gameClass.isCoordinatesValid(testInput);
+            bool isValid = gameClass.IsCoordinateValid(testInput);
 
             Assert.IsFalse(isValid);
         }
@@ -37,7 +37,7 @@ namespace Battleship.Tests
 
             string testInput = "C7";
 
-            bool isValid = gameClass.isCoordinatesValid(testInput);
+            bool isValid = gameClass.IsCoordinateValid(testInput);
 
             Assert.IsTrue(isValid);
         }

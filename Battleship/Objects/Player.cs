@@ -204,14 +204,5 @@ namespace Battleship.Objects
                     break;
             }
         }
-
-        //public Coordinates IsValid(string playerInput)
-        //{
-        //    var error = "";
-
-
-
-        //    return error;
-        //}
     }
 }

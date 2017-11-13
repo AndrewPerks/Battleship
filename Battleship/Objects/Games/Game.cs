@@ -27,22 +27,18 @@ namespace Battleship.Objects.Games
             Console.WriteLine("Write firing coordinates");
             string coords = Console.ReadLine();
 
-            if (!isCoordinatesValid(coords))
+            if (!IsCoordinateValid(coords))
             {
                 Console.WriteLine("Input is not valid - Must match the format i.e. A5");
                 PlayRound();
             }
 
-            Console.WriteLine("Where would you like to shoot along?");
-            var along = int.Parse(Console.ReadLine());
-            Console.WriteLine("Where would you like to shoot down?");
-            var down = int.Parse(Console.ReadLine());
+            var firstChar = getCharacter(coords, 0);
+            var secondChar = getCharacter(coords, 1);
+
+            var along = getCharacterPostionInAlphabet(firstChar);
+            var down = int.Parse(secondChar);
             var coordinates = new Boards.Coordinates(along, down);
-
-
-
-            // Have coordinates been picked
-            // Is input valid
 
 
             //Console.WriteLine(Player1.Name + " already picked those coordinates");
@@ -60,7 +56,20 @@ namespace Battleship.Objects.Games
             Player1.OutputBoards();
         }
 
-        public bool isCoordinatesValid(string coords)
+        private int getCharacterPostionInAlphabet(string letter)
+        {
+            char c = Convert.ToChar(letter);
+            //you may use lower case character.
+            int index = char.ToUpper(c) - 64; //index == 1 
+            return index;
+        }
+
+        private string getCharacter(string coordinates, int position)
+        {
+            return coordinates[position].ToString();
+        }
+
+        public bool IsCoordinateValid(string coords)
         {
             string pat = "^[A-J][0-9]?$|^[a-j][0-9]?$";
 
