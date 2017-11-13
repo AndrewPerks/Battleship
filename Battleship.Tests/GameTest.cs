@@ -4,8 +4,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Battleship.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class GameTest
     {
+        [TestMethod]
+        public void Regex_rejects_one_character_for_player_input()
+        {
+            Game gameClass = new Game();
+
+            string testInput = "A";
+
+            bool isValid = gameClass.IsCoordinateValid(testInput);
+
+            Assert.IsFalse(isValid);
+        }
+
         [TestMethod]
         public void Regex_rejects_three_characters_for_player_input()
         {
