@@ -1,7 +1,7 @@
-﻿using BattleshipModellingPractice.Objects.Games;
+﻿using Battleship.Objects.Games;
 using System;
 
-namespace BattleshipModellingPractice
+namespace Battleship
 {
     class Program
     {

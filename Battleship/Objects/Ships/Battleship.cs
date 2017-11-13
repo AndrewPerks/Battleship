@@ -1,4 +1,4 @@
-﻿namespace BattleshipModellingPractice.Objects.Ships
+﻿namespace Battleship.Objects.Ships
 {
     public class Battleship : Ship
     {

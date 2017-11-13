@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
-namespace BattleshipModellingPractice.Objects.Games
+namespace Battleship.Objects.Games
 {
     public class Game
     {
@@ -23,12 +24,22 @@ namespace BattleshipModellingPractice.Objects.Games
         {
             //Each exchange of shots is called a Round.
             //One round = Player 1 fires a shot, then Player 2 fires a shot.
+            Console.WriteLine("Write firing coordinates");
+            string coords = Console.ReadLine();
+
+            if (!isCoordinatesValid(coords))
+            {
+                Console.WriteLine("Input is not valid - Must match the format i.e. A5");
+                PlayRound();
+            }
 
             Console.WriteLine("Where would you like to shoot along?");
             var along = int.Parse(Console.ReadLine());
             Console.WriteLine("Where would you like to shoot down?");
             var down = int.Parse(Console.ReadLine());
             var coordinates = new Boards.Coordinates(along, down);
+
+
 
             // Have coordinates been picked
             // Is input valid
@@ -47,6 +58,18 @@ namespace BattleshipModellingPractice.Objects.Games
             }
 
             Player1.OutputBoards();
+        }
+
+        public bool isCoordinatesValid(string coords)
+        {
+            string pat = "^[A-J][0-9]?$|^[a-j][0-9]?$";
+
+            // Instantiate the regular expression object.
+            Regex r = new Regex(pat, RegexOptions.IgnoreCase);
+
+            // Match the regular expression pattern against a text string.
+            var isValid = r.IsMatch(coords);
+            return isValid;
         }
 
         public void PlayToEnd()

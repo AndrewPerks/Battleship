@@ -1,8 +1,8 @@
-﻿using BattleshipModellingPractice.Extensions;
+﻿using Battleship.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BattleshipModellingPractice.Objects.Boards
+namespace Battleship.Objects.Boards
 {
     /// <summary>
     /// Represents a collection of Panels to show where the player has fired shots, and whether those shots are hits or misses.

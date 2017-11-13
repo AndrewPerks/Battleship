@@ -1,8 +1,8 @@
-﻿using BattleshipModellingPractice.Objects.Boards;
+﻿using Battleship.Objects.Boards;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BattleshipModellingPractice.Extensions
+namespace Battleship.Extensions
 {
     public static class PanelExtensions
     {

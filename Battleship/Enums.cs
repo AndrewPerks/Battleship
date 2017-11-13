@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BattleshipModellingPractice
+namespace Battleship
 {
     public enum OccupationType
     {

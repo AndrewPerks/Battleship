@@ -1,7 +1,7 @@
-﻿using BattleshipModellingPractice.Extensions;
+﻿using Battleship.Extensions;
 using System.ComponentModel;
 
-namespace BattleshipModellingPractice.Objects.Boards
+namespace Battleship.Objects.Boards
 {
     /// <summary>
     /// The basic class for this modelling practice.  Represents a single square on the game board.

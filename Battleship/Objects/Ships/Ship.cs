@@ -1,4 +1,4 @@
-﻿namespace BattleshipModellingPractice.Objects
+﻿namespace Battleship.Objects
 {
     /// <summary>
     /// Represents a player's ship as placed on their Game Board.

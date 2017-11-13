@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BattleshipModellingPractice.Objects.Boards
+namespace Battleship.Objects.Boards
 {
     /// <summary>
     /// Represents a collection of Panels to provide a Player with their Game Board (e.g. where their ships are placed).

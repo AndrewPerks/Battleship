@@ -1,11 +1,11 @@
-﻿using BattleshipModellingPractice.Extensions;
-using BattleshipModellingPractice.Objects.Boards;
-using BattleshipModellingPractice.Objects.Ships;
+﻿using Battleship.Extensions;
+using Battleship.Objects.Boards;
+using Battleship.Objects.Ships;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BattleshipModellingPractice.Objects
+namespace Battleship.Objects
 {
     public class Player
     {
@@ -28,7 +28,7 @@ namespace BattleshipModellingPractice.Objects
             {
                 new Destroyer(),
                 new Destroyer(),
-                new Battleship()
+                new Ships.Battleship()
             };
             GameBoard = new GameBoard();
             FiringBoard = new FiringBoard();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BattleshipModellingPractice.Extensions
+namespace Battleship.Extensions
 {
     public static class EnumExtensions
     {
