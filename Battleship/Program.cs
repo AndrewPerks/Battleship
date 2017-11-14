@@ -7,7 +7,6 @@ namespace Battleship
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Press enter to begin!");
             Console.ReadLine();
 

@@ -152,7 +152,6 @@ namespace Battleship.Objects
             return coords;
         }
 
-
         private Coordinates RandomShot()
         {
             var availablePanels = FiringBoard.GetOpenRandomPanels();
@@ -189,17 +188,14 @@ namespace Battleship.Objects
 
         public void ProcessShotResult(Coordinates coords, ShotResult result)
         {
-            //var gamePanel = GameBoard.Panels.At(coords.Row, coords.Column);
             var panel = FiringBoard.Panels.At(coords.Row, coords.Column);
             switch(result)
             {
                 case ShotResult.Hit:
-                    //gamePanel.OccupationType = OccupationType.Hit;
                     panel.OccupationType = OccupationType.Hit;
                     break;
 
                 default:
-                    //gamePanel.OccupationType = OccupationType.Miss;
                     panel.OccupationType = OccupationType.Miss;
                     break;
             }
