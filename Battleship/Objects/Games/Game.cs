@@ -30,7 +30,7 @@ namespace Battleship.Objects.Games
             if (!IsCoordinateValid(coords))
             {
                 Console.WriteLine("Input is not valid - Must match the format i.e. A5");
-                PlayRound();
+                return;
             }
 
             var firstChar = getCharacter(coords, 0);
@@ -71,7 +71,7 @@ namespace Battleship.Objects.Games
 
         public bool IsCoordinateValid(string coords)
         {
-            string pat = "^[A-J][0-9]?$|^[a-j][0-9]?$";
+            string pat = @"^([A-Ja-j][0-9])$";
 
             // Instantiate the regular expression object.
             Regex r = new Regex(pat, RegexOptions.IgnoreCase);
