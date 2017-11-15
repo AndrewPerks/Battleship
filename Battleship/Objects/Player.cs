@@ -60,8 +60,7 @@ namespace Battleship.Objects
                 Console.Write(characterLetter + " ");
                                 
                 for (int ownColumn = 1; ownColumn <= 10; ownColumn++)
-                {
-                       
+                {                       
                     Console.Write(GameBoard.Panels.At(row, ownColumn).Status + " ");
                 }
                 Console.Write("              ");

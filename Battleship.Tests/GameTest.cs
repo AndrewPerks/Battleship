@@ -31,6 +31,18 @@ namespace Battleship.Tests
         }
 
         [TestMethod]
+        public void Regex_accepts_A10_for_player_input()
+        {
+            Game gameClass = new Game();
+
+            string testInput = "A10";
+
+            bool isValid = gameClass.IsCoordinateValid(testInput);
+
+            Assert.IsTrue(isValid);
+        }
+
+        [TestMethod]
         public void Regex_rejects_letters_after_J_alphabetically()
         {
             Game gameClass = new Game();

@@ -34,7 +34,7 @@ namespace Battleship.Objects.Games
             }
 
             var firstChar = getCharacter(coords, 0);
-            var secondChar = getCharacter(coords, 1);
+            var secondChar = getCharacter(coords, 1, 2);
 
             var along = getCharacterPostionInAlphabet(firstChar);
             var down = int.Parse(secondChar);
@@ -64,14 +64,18 @@ namespace Battleship.Objects.Games
             return index;
         }
 
-        private string getCharacter(string coordinates, int position)
+        private string getCharacter(string coordinates, int startPosition, int length = 1)
         {
-            return coordinates[position].ToString();
+            if ((coordinates.Length - startPosition) < length)
+            {
+                return coordinates[startPosition].ToString();
+            }
+            return coordinates.Substring(startPosition, length).ToString();
         }
 
         public bool IsCoordinateValid(string coords)
         {
-            string pat = @"^([A-Ja-j][0-9])$";
+            string pat = @"(^[A-Ja-j][0-9]$)|(^[A-Ja-j][1][0]$)";
 
             // Instantiate the regular expression object.
             Regex r = new Regex(pat, RegexOptions.IgnoreCase);
