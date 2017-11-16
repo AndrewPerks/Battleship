@@ -1,12 +1,18 @@
 ﻿using Battleship.Objects.Games;
+using Battleship.Objects.Windows;
 using System;
 
 namespace Battleship
 {
+
     class Program
     {
+
         static void Main(string[] args)
         {
+            Window window = new Window();
+            window.Maximise();
+
             Console.WriteLine("Press enter to begin!");
             Console.ReadLine();
 

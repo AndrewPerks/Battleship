@@ -54,6 +54,7 @@
     <Compile Include="Objects\Ships\Battleship.cs" />
     <Compile Include="Objects\Ships\Destroyer.cs" />
     <Compile Include="Objects\Ships\Ship.cs" />
+    <Compile Include="Objects\Windows\Window.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
